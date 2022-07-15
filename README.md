@@ -12,9 +12,9 @@ Run `ng test` to do the unit tests
 
 ## High lights
 
-- [] Docker enabled
+- Docker enabled
 
-- [] different calculation method are applied to weekly, bi-weekly,accelerated weekly, and accelerated bi-weekly
+- different calculation method are applied to weekly, bi-weekly,accelerated weekly, and accelerated bi-weekly
 
 | Method | Mortgage amount |
 | ----------- | ----------- |
@@ -23,23 +23,23 @@ Run `ng test` to do the unit tests
 | bi-weekly | monthly payment * 12 / 26 |
 | accelerated bi-weekly | monthly payment /2 |
 
-- [] The page is responsive.
+- The page is responsive.
 
-- [] Factory method pattern is used to create instances of different mortgage calculators in factory service
+- Factory method pattern is used to create instances of different mortgage calculators in factory service
 
-- [] Strategy pattern is used to apply different mortgage calculation methods in calculation service
+- Strategy pattern is used to apply different mortgage calculation methods in calculation service
 
-- [] All unit tests are fixed and passed
+- All unit tests are fixed and passed
 
 ## Things to do
 
--- Directive to format currency amount in the input forms
+- Directive to format currency amount in the input forms
 
--- Data validation
+- Data validation
 
--- Exception handling
+- Exception handling
 
--- Add more unit tests to increase the code coverage
+- Add more unit tests to increase the code coverage
 
 ## Build a docker image
 
