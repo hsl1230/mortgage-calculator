@@ -21,7 +21,7 @@ Run `ng test` to do the unit tests
 | weekly | monthly payment * 12 / 52 |
 | accelerated weekly | monthly payment / 4 |
 | bi-weekly | monthly payment * 12 / 26 |
-| accelerated bi-weekly | monthly payment /2 |
+| accelerated bi-weekly | monthly payment / 2 |
 
 - The page is responsive.
 
