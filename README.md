@@ -16,7 +16,7 @@ Run `ng test` to do the unit tests
 
 - different calculation method are applied to weekly, bi-weekly,accelerated weekly, and accelerated bi-weekly
 
-| Method | Mortgage amount |
+| Method | Mortgage payment |
 | ----------- | ----------- |
 | weekly | monthly payment * 12 / 52 |
 | accelerated weekly | monthly payment / 4 |
