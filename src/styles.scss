@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-card-title.mat-card-title {
+  margin: -17px !important;
+  padding: 17px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background: antiquewhite;
+}
+
+.row>div {
+  margin-top: 10px;
+}
+
+.container {
+  margin-top: 10px;
+}

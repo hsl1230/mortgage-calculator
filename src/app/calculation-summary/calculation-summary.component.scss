@@ -1,0 +1,18 @@
+table.mat-table {
+  width: 100%;
+}
+
+tr>td:first-child {
+  text-align: left;
+}
+
+td.mat-cell {
+  padding-right: 50px;
+  text-align: right;
+}
+
+th.mat-header-cell {
+  padding-right: 0;
+  text-align: center;
+  font-size: 18px;
+}

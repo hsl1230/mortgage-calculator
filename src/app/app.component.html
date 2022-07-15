@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>
+    <img src="assets/images/MC-CH.svg" height="53" width="53"
+      alt="Image of a pink square with a house and a calculator">
+    <span>Mortgage Calculator</span>
+  </h1>
+  <span><strong>From <a href="https://www.canada.ca/en/financial-consumer-agency.html">Financial Consumer Agency of
+        Canada</a></strong></span>
+</div>
+
+<div class="container">
+  <p>This calculator determines your mortgage payment and provides you with a mortgage payment schedule. The
+    calculator also shows how much money and how many years you can save by making prepayments.</p>
+  <p>
+    To help determine whether or not you qualify for a home mortgage based on income and expenses, visit the <a
+      href="https://itools-ioutils.fcac-acfc.gc.ca/MQ-HQ/MQ-EAPH-eng.aspx">Mortgage Qualifier Tool</a>.
+  </p>
+  <p><strong>Note:</strong> As of July 9, 2012, the maximum amortization period for mortgages with less than a 20
+    percent down payment is <strong>25 years</strong>.</p>
+</div>
+
+<div>
+  <app-payment-plan (onCalculate)="calculate($event)"></app-payment-plan>
+</div>
+
+<div *ngIf="mortgageResult" class="container">
+  <app-calculation-summary [mortgageResult]="mortgageResult"></app-calculation-summary>
+</div>
+<div *ngIf="mortgageResult" class="container">
+  <app-mortgage-summary [mortgageResult]="mortgageResult"></app-mortgage-summary>
+</div>

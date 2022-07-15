@@ -1,0 +1,113 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="calculate()">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-card>
+          <mat-card-title>Payment Plan</mat-card-title>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard">
+                  <mat-label>Mortgage Amount</mat-label>
+                  <input matInput type="number" name="mortgageAmount" formControlName="mortgageAmount"
+                    class="example-right-align" placeholder="0">
+                  <span matPrefix>$&nbsp;</span>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard">
+                  <mat-label>Interest Rate</mat-label>
+                  <input matInput type="number" name="interestRate" formControlName="interestRate"
+                    class="example-right-align" placeholder="0">
+                  <span matSuffix>&nbsp;%</span>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="standard" hintLabel="Amortization period required">
+                  <mat-label>Amortization Period</mat-label>
+                  <mat-select matNativeControl
+                    name="amortizationPeriodYear" formControlName="amortizationPeriodYear">
+                    <mat-option *ngFor="let year of range(1, 50)" [value]="year">{{year}} Year{{year > 1? 's': ''}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>&nbsp;&nbsp;
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="standard">
+                  <mat-select matNativeControl
+                    name="amortizationPeriodMonth" formControlName="amortizationPeriodMonth">
+                    <mat-option value="0"></mat-option>
+                    <mat-option *ngFor="let month of range(1, 11)" [value]="month">{{month}} Month{{month > 1?
+                      's':
+                      ''}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard" hintLabel="Payment frequency required">
+                  <mat-label>Payment Frequency</mat-label>
+                  <mat-select matNativeControl name="paymentFrequency"
+                    formControlName="paymentFrequency">
+                    <mat-option *ngFor="let item of PaymentFrequency | keyvalue" [value]="item.key">
+                      {{item.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard" hintLabel="Term required">
+                  <mat-label>Term</mat-label>
+                  <mat-select matNativeControl name="term" formControlName="term">
+                    <mat-option *ngFor="let year of range(1, 5)" [value]="year">{{year}} Year{{year > 1? 's': ''}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-6">
+        <mat-card>
+          <mat-card-title>Prepayment Plan</mat-card-title>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard">
+                  <mat-label>Prepayment Amount</mat-label>
+                  <input matInput type="number" name="prepaymentAmount" formControlName="prepaymentAmount"
+                    class="example-right-align" placeholder="0">
+                  <span matPrefix>$&nbsp;</span>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard" hintLabel="Prepayment frequency required">
+                  <mat-label>Prepayment Frequency</mat-label>
+                  <mat-select matNativeControl
+                    name="prepaymentFrequency" formControlName="prepaymentFrequency">
+                    <mat-option *ngFor="let item of PrepaymentFrequency | keyvalue" [value]="item.key">
+                      {{item.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-xs-12">
+                <mat-form-field appearance="standard" hintLabel="Start with payment required">
+                  <mat-label>Start With Payment</mat-label>
+                  <input matInput type="number" name="paymentToStartWith" formControlName="paymentToStartWith"
+                    class="example-right-align" placeholder="0">
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="row">
+        <div>
+          <button mat-button type="submit">Calculate ...</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

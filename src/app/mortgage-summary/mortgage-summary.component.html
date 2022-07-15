@@ -1,0 +1,56 @@
+<div *ngIf="mortgageResult">
+  <h2>Mortgage Summary</h2>
+  <div>
+    <p>
+        &nbsp;Over the {{years}}-year amortization period, you will:
+    </p>
+    <ul>
+        <li>
+            have made <strong>{{mortgageResult.mortgage.numberOfPayments}}</strong> {{mortgageResult.paymentParams.paymentFrequency}} payments of <strong>{{mortgageResult.mortgage.mortgagePayment | currency: '$' }}</strong>
+            <span *ngIf="mortgageResult.mortgage.finalPayment > 1">
+              and one final payment of <strong>{{mortgageResult.mortgage.finalPayment | currency: '$'}}</strong>
+            </span>.
+        </li>
+        <li *ngIf="mortgageResult.prepaymentParams.prepaymentAmount > 1">
+            have made a {{mortgageResult.prepaymentParams.prepaymentFrequency}} prepayment of <strong>{{mortgageResult.prepaymentParams.prepaymentAmount | currency: '$'}}</strong> at payment number<strong>{{mortgageResult.prepaymentParams.paymentToStartWith}}</strong>.
+        </li>
+        <li>
+            have paid <strong>{{mortgageResult.mortgage.principalPayments | currency: '$'}}</strong> in principal, <strong>{{mortgageResult.mortgage.interestPayments | currency: '$'}}</strong> in interest,
+            for a total of <strong>{{mortgageResult.mortgage.principalPayments + mortgageResult.mortgage.interestPayments | currency: '$'}}</strong>.</li>
+    </ul>
+
+    <p>
+        &nbsp;Over the {{mortgageResult.paymentParams.term}}-year term, you will:
+    </p>
+    <ul>
+        <li>
+            have made <strong>{{mortgageResult.mortgageInTerm.numberOfPayments}}</strong> {{mortgageResult.paymentParams.paymentFrequency}} payments of <strong>{{mortgageResult.mortgageInTerm.mortgagePayment | currency: '$'}}</strong>.</li>
+        <li *ngIf="mortgageResult.prepaymentParams.prepaymentAmount > 1">
+            have made a {{mortgageResult.prepaymentParams.prepaymentFrequency}} prepayment of <strong>{{mortgageResult.prepaymentParams.prepaymentAmount | currency: '$'}}</strong> at payment number <strong>{{mortgageResult.prepaymentParams.paymentToStartWith}}</strong>.</li>
+        <li>
+            have paid <strong>{{mortgageResult.mortgageInTerm.principalPayments | currency: '$'}}</strong> in principal, <strong>{{mortgageResult.mortgageInTerm.interestPayments | currency: '$'}}</strong> in interest,
+            for a total of <strong>{{mortgageResult.mortgageInTerm.principalPayments + mortgageResult.mortgageInTerm.interestPayments | currency: '$'}}</strong>.</li>
+    </ul>
+
+    <p>
+        &nbsp;At the end of your {{mortgageResult.paymentParams.term}}-year term, you will:
+    </p>
+    <ul>
+        <li>
+            have a balance of <strong>{{mortgageResult.paymentParams.mortgageAmount - mortgageResult.mortgageInTerm.principalPayments | currency: '$'}}</strong>.</li>
+    </ul>
+
+    <div *ngIf="mortgageResult.prepaymentParams.prepaymentAmount > 1">
+        <p>
+            &nbsp;Prepayment Savings
+        </p>
+        <ul>
+            <li>
+                By the end of the amortization period, with your {{mortgageResult.prepaymentParams.prepaymentFrequency}} prepayment of <strong>{{mortgageResult.prepaymentParams.prepaymentAmount | currency: '$'}}</strong>,
+                you save <strong>{{mortgageResult.mortgageWithoutPrepayments.interestPayments - mortgageResult.mortgage.interestPayments | currency: '$'}}</strong> in interest and pay your mortgage off <strong>{{timeSooner}}</strong> sooner than if you had the same mortgage with no prepayment.</li>
+            <li>
+                By the end of the term, with your {{mortgageResult.prepaymentParams.prepaymentFrequency}} prepayment of <strong>{{mortgageResult.prepaymentParams.prepaymentAmount | currency: '$'}}</strong>, you save <strong>{{mortgageResult.mortgageWithoutPrepaymentsInTerm.interestPayments - mortgageResult.mortgageInTerm.interestPayments | currency: '$'}}</strong> more in interest than if you had the same mortgage with no prepayment.</li>
+        </ul>
+    </div>
+  </div>
+</div>
