@@ -12,14 +12,24 @@ Run `ng test` to do the unit tests
 
 ## High lights
 
--- Docker enabled
+- [] Docker enabled
 
--- Factory method pattern is used to create instances of different mortgage calculators in factory service
+- [] different calculation method are applied to weekly, bi-weekly,accelerated weekly, and accelerated bi-weekly
 
--- Strategy pattern is used to apply different mortgage calculation methods in calculation service
+| Method | Mortgage amount |
+| ----------- | ----------- |
+| weekly | monthly payment * 12 / 52 |
+| accelerated weekly | monthly payment / 4 |
+| bi-weekly | monthly payment * 12 / 26 |
+| accelerated bi-weekly | monthly payment /2 |
 
--- All unit tests are fixed and passed
+- [] The page is responsive.
 
+- [] Factory method pattern is used to create instances of different mortgage calculators in factory service
+
+- [] Strategy pattern is used to apply different mortgage calculation methods in calculation service
+
+- [] All unit tests are fixed and passed
 
 ## Things to do
 
