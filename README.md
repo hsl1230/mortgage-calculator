@@ -16,12 +16,18 @@ Run `ng test` to do the unit tests
 
 - different calculation method are applied to weekly, bi-weekly,accelerated weekly, and accelerated bi-weekly
 
-| Method | Mortgage payment |
-| ----------- | ----------- |
-| weekly | monthly payment * 12 / 52 |
-| accelerated weekly | monthly payment / 4 |
-| bi-weekly | monthly payment * 12 / 26 |
-| accelerated bi-weekly | monthly payment / 2 |
+| Method | Mortgage payment | Description
+| ----------- | ----------- | ----------- |
+| monthly | M = P [ i(1 + i)^n ] / [ (1 + i)^n – 1]. |
+M = Total monthly payment.
+P = The total amount of your loan.
+I = Your interest rate, as a monthly percentage.
+N = The total amount of months in your timeline for paying off your mortgage. |
+| semi monthly | same as above | same as above |
+| weekly | monthly payment * 12 / 52 | |
+| accelerated weekly | monthly payment / 4 | |
+| bi-weekly | monthly payment * 12 / 26 | |
+| accelerated bi-weekly | monthly payment / 2 | |
 
 - The page is responsive.
 
