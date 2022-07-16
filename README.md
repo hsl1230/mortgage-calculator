@@ -19,7 +19,7 @@ Run `ng test` to do the unit tests
 | Method | Mortgage payment | Description
 | ----------- | ----------- | ----------- |
 | monthly | M = P [ i(1 + i)^n ] / [ (1 + i)^n – 1]. | M = Total monthly payment. <br> P = The total amount of your loan. <br> I = Your interest rate, as a monthly percentage. <br> N = The total amount of months in your timeline for paying off your mortgage. |
-| semi monthly | same as above | same as above |
+| semi monthly | same as above | same as above except <br> I = Your interest rate, as a semi-monthly percentage. |
 | weekly | monthly payment * 12 / 52 | |
 | accelerated weekly | monthly payment / 4 | |
 | bi-weekly | monthly payment * 12 / 26 | |
