@@ -4,6 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 NodeJs Version: v18.1.0
 
+## Prerequisite
+
+Docker installed on Ubuntu
+
+Tested on docker Docker version 20.10.17, build 100c701 on Ubuntu 22.04 LTS
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
