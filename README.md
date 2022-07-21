@@ -49,13 +49,13 @@ Run `ng test` to do the unit tests
 
 - Add more unit tests to increase the code coverage
 
-## Build a docker image
+## Build a docker image from your local
 
 ```bash
 docker build -t <your docker hub id>/mortgage-calculator .
 ```
 
-## Pull the docker image from Docker Hub
+## Or pull the docker image from Docker Hub
 
 ```bash
 docker pull hslcalgary/mortgage-calculator
@@ -66,6 +66,10 @@ docker pull hslcalgary/mortgage-calculator
 ```bash
 docker run -it -d -p 4200:4200 hslcalgary/mortgage-calculator
 ```
+
+## Launch up your application
+
+open the link (http://localhost:4200)
 
 ## Related docker commands
 
