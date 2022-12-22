@@ -7,8 +7,6 @@ RUN mkdir $work_dir
 WORKDIR /${work_dir}
 COPY . ./
 
-RUN npm install -g @angular/cli
-RUN ["npm", "install"]
-ENV PORT=4200
-ENTRYPOINT ["ng", "serve", "--host", "0.0.0.0"]
+ENV PORT=8081
+ENTRYPOINT ["node", "server.js"]
 EXPOSE ${PORT}
