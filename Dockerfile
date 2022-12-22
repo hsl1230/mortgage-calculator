@@ -8,6 +8,6 @@ WORKDIR /${work_dir}
 COPY . ./
 
 RUN npm install express
-ENV PORT=8081
+ENV PORT=80
 ENTRYPOINT ["node", "server.js"]
 EXPOSE ${PORT}
