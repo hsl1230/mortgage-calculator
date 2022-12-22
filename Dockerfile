@@ -7,6 +7,7 @@ RUN mkdir $work_dir
 WORKDIR /${work_dir}
 COPY . ./
 
+RUN npm install express
 ENV PORT=8081
 ENTRYPOINT ["node", "server.js"]
 EXPOSE ${PORT}
