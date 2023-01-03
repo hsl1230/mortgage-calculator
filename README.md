@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 NodeJs Version: v18.1.0
 
+[Requirement](./FE%20Assessment.docx)
+
 ## Prerequisite
 
 Docker installed on Ubuntu
